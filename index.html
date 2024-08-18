@@ -2,54 +2,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>crash pro side</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>crash pro side</title>
 
-    <!--google font-->
+  <!--google font-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!--daisy ui-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!--daisy ui-->
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      * {
-        font-family: "Poppins", sans-serif;
-        font-family: "Anton", sans-serif;
-      }
-    </style>
+  <style>
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .fontClass {
+      font-family: "Anton", sans-serif;
+    }
+  </style>
 
 
 </head>
 
-<body>
-    <section class="bg-black w-[1440px] h-[660px]">
-        <div class="h-[660px] ml-[409px] mr-[409px]"
-        style="background-image: url(images/background.png);">
-       
-        <div class=" text-center">
-          <div class="">
-            <h1 class="pt-[267px] text-[#FFFFFF] text-7xl  not-italic font-normal">ALPHABET CLASH</h1>
-            <p class="text-[#FFFFFF]  text-base font-medium mt-7">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+<body class="bg-[#010313]">
 
-            <div class="pt-8">
-                <button class="btn text-[#010313]">Play Now</button></div>
-          </div>
+  <!--first section-->
+  <section id="first">
+
+    <div class="flex justify-center relative">
+      <img src="/images/background.png" class="h-screen" alt="">
+
+      <div class="absolute top-80 left-[30%]">
+        <h1 class="fontClass text-white text-[120px] font-normal text-center">ALPHABET CLASH</h1>
+        <p class="text-white text-center text-xl font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+        <div class="flex justify-center mt-14">
+          <button onclick="play()" class="bg-white px-8 py-[22px] text-[#010313] text-xl font-semibold rounded-lg">Play
+            Now</button>
         </div>
       </div>
-    </section>
+    </div>
+
+
+  </section>
+  <!--second section-->
+  <section id="second" class="hidden">
+    <div class="flex justify-center relative">
+      <img src="/images/background.png" class="h-screen" alt="">
+
+      <div class="absolute top-36 left-[25%]">
+        <div class="w-[1000px] h-[350px] border-[20px] rounded-2xl border-[#46474e] bg-[#FFFFFFB2]">
+          <p class="mt-[-10px] text-white bg-[#46474e] w-fit mx-auto rounded-lg py-2 px-5">
+            Don't watch keyboard while playing...
+          </p>
+          <h1 id="word" class="text-[120px] font-semibold text-center mt-16">Y</h1>
+        </div>
+        <div class="-ml-12">
+          <div class="flex flex-wrap justify-center gap-3 mt-16 w-[530px] mx-auto">
+            <button onclick="Click('q')" class="btn btn-active">q</button>
+            <button onclick="Click('w')" class="btn btn-active">w</button>
+            <button onclick="Click('e')" class="btn btn-active">e</button>
+            <button onclick="Click('r')" class="btn btn-active">r</button>
+            <button onclick="Click('t')" class="btn btn-active">t</button>
+            <button onclick="Click('y')" class="btn btn-active">y</button>
+            <button onclick="Click('u')" class="btn btn-active">u</button>
+            <button onclick="Click('i')" class="btn btn-active">i</button>
+            <button onclick="Click('o')" class="btn btn-active">o</button>
+            <button onclick="Click('p')" class="btn btn-active">p</button>
+            <button onclick="Click('a')" class="btn btn-active">a</button>
+            <button onclick="Click('s')" class="btn btn-active">s</button>
+            <button onclick="Click('d')" class="btn btn-active">d</button>
+            <button onclick="Click('f')" class="btn btn-active">f</button>
+            <button onclick="Click('g')" class="btn btn-active">g</button>
+            <button onclick="Click('h')" class="btn btn-active">h</button>
+            <button onclick="Click('j')" class="btn btn-active">j</button>
+            <button onclick="Click('k')" class="btn btn-active">k</button>
+            <button onclick="Click('l')" class="btn btn-active">l</button> <br>
+            <button onclick="Click('z')" class="btn btn-active">z</button>
+            <button onclick="Click('x')" class="btn btn-active">x</button>
+            <button onclick="Click('c')" class="btn btn-active">c</button>
+            <button onclick="Click('v')" class="btn btn-active">v</button>
+            <button onclick="Click('b')" class="btn btn-active">b</button>
+            <button onclick="Click('n')" class="btn btn-active">n</button>
+            <button onclick="Click('m')" class="btn btn-active">m</button>
+            <button onclick="Click('/')" class="btn btn-active">/</button>
+          </div>
+        </div>
+        <div class="flex justify-between mt-12">
+
+          <button class="btn btn-primary rounded-full">Life: <span id="life">5</span></button>
+          <button class="btn btn-secondary rounded-full">Score: <span id="score">0</span></button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="third" class="hidden">
+
+    <div class="flex justify-center relative">
+      <img src="/images/background.png" class="h-screen" alt="">
+
+      <div class="absolute top-80 left-[42.5%]">
+        <div class="bg-red-500 p-10 rounded-md text-white text-center">
+          <h2 class="text-4xl"><b>Score</b>: <span id="new-score">0</span></h2>
+          <button onclick="playAgain()"
+            class="bg-white px-8 py-[16px] mt-8 text-[#010313] text-xl font-semibold rounded-lg">Play Again</button>
+          <p class="mt-8">Practice will make you Pro</p>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+<script src="js/index.js"></script>
 </body>
 
 </html>
