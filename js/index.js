@@ -42,3 +42,4 @@ function playAgain() {
     document.getElementById('life').innerText = 5
     randomNumber()
 }
+
