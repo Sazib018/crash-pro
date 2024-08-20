@@ -1,6 +1,10 @@
+window.onload = function() {
+    document.addEventListener('keyup', keyUp)
+};
+
+
 function play() {
-    document.getElementById('first').classList.add('hidden');
-    document.getElementById('second').classList.remove('hidden');
+    
     randomNumber()
 }
 
@@ -10,6 +14,16 @@ function randomNumber() {
     document.getElementById('word').innerText = word[randomNum];
 }
 
+function keyUp(event) {
+    if (event.key === 'Enter') {
+        playAgain()
+    }
+    else{
+        Click(event.key)
+    }           
+    
+}
+
 
 
 function Click(alphabet) {
@@ -17,7 +31,7 @@ function Click(alphabet) {
     if (word === alphabet) {
         const score = document.getElementById('score').innerText;
         const scoreNum = parseInt(score);
-        const totalScore = scoreNum + 10;
+        const totalScore = scoreNum + 5 ;
         document.getElementById('score').innerText = totalScore;
         randomNumber()
     } else {
@@ -37,9 +51,13 @@ function Click(alphabet) {
 }
 
 function playAgain() {
+    document.getElementById('first').classList.add('hidden');
     document.getElementById('third').classList.add('hidden')
     document.getElementById('second').classList.remove('hidden')
-    document.getElementById('life').innerText = 5
+    document.getElementById('life').innerText = 5;
+    document.getElementById('score').innerText = 0;
     randomNumber()
 }
+
+
 
